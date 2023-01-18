@@ -1,0 +1,50 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "toolchain",
+            "tools": [
+                "ptex2pdf",
+                "pbibtex",
+                "ptex2pdf",
+                "ptex2pdf",
+                "platex"
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "ptex2pdf",
+            "command": "ptex2pdf",
+            "args": [
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "platex",
+            "command": "platex",
+            "args": [
+                "-kanji=utf8 -synctex=1",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pbibtex",
+            "command": "pbibtex",
+            "args": [
+                "%DOCFILE%",
+                "-kanji=utf8"
+            ]
+        },        
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    //自動コンパイルしない
+    "latex-workshop.latex.autoBuild.run": "never", //"onFileChange",
+    //自動コンパイルしない
+    "latex-workshop.latex.autoBuild.onSave.enabled": false,
+    "latex-workshop.latex.autoBuild.interval": 0,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.chktex.enabled": false
+}
